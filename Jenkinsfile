@@ -2,7 +2,7 @@
 
 pipeline {
 
-    agent {
+    agent any {
         docker {
             image 'ubuntu'
             echo "hello-hapi"
