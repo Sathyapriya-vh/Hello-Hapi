@@ -4,8 +4,8 @@ pipeline {
 
     agent {
         docker {
-            image 'node'
-            args '-u root'
+            image 'ubuntu'
+            echo "hello-hapi"
         }
     }
 
@@ -13,13 +13,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+            
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'npm test'
+              
             }
         }
     }
