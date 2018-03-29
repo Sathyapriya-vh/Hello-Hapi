@@ -1,12 +1,19 @@
 pipeline {
-    agent any
-    tools {
-        maven 'apache-maven-3.3.9'
-    }
+    agent any 
     stages {
-        stage('Build') {
+        stage('Build') { 
             steps {
-                sh 'mvn clean package'
+                echo 'building' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'testing'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'deploying'
             }
         }
     }
